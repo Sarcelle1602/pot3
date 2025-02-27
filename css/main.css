@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", serif;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(1.875rem, 0.915rem + 4.087vw, 3.75rem);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrapper {
+  width: min(100% - 4rem, 69.375rem);
+  margin-inline: auto;
+}
+
+.image-credit {
+  font-size: 1.125rem;
+  text-align: center;
+}
+.image-credit a {
+  color: #000;
+  text-underline-offset: 0.2em;
+}
+
+.section {
+  background-image: linear-gradient(#fde8ee, #b2c8f3);
+}
+.section__heading {
+  padding-block: 4rem;
+  text-align: center;
+}
+.section .image-credit {
+  padding-block: 2rem 3rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.875rem 1.25rem;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.card__image {
+  max-height: 12.3125rem;
+  max-width: 12.3125rem;
+  aspect-ratio: 1/1;
+  border: 5px solid #ee6791;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-inline: auto;
+}
+.card__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.card__title {
+  font-size: 1.25rem;
+  margin-top: 1.875rem;
+}
+.card__description {
+  font-style: italic;
+  margin-top: 1.5625rem;
+}
+.card__role {
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+.card__social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.875rem;
+}
+.card__social-icons i {
+  font-size: 1.5rem;
+  color: #ee6791;
+}
+
+.footer {
+  background-color: #333333;
+  color: white;
+  text-align: center;
+}
+.footer__text {
+  font-size: 0.875rem;
+  padding-block: 2rem;
+}
+.footer__credit {
+  font-size: 0.8rem;
+  padding-block: 2rem;
+}
+
+/*# sourceMappingURL=main.css.map */

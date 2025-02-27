@@ -1,0 +1,146 @@
+@use "./abstracts/functions" as u;
+
+// GOOGLE FONTS
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+// VARIABLES
+$clr-primary: #ee6791;
+$clr-section-bg: linear-gradient(#fde8ee, #b2c8f3);
+$clr-footer-bg: #333333;
+$shadow-card: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+// RESET
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// GLOBAL STYLES
+body {
+  font-family: "Open Sans", serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", serif;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(1.875rem, 0.915rem + 4.087vw, 3.75rem);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrapper {
+  width: min(100% - 4rem, u.rem(1110));
+  margin-inline: auto;
+}
+
+.image-credit {
+  font-size: u.rem(18);
+  text-align: center;
+
+  a {
+    color: #000;
+    text-underline-offset: 0.2em;
+  }
+}
+
+// SECTION STYLES
+.section {
+  background-image: $clr-section-bg;
+
+  &__heading {
+    padding-block: 4rem;
+    text-align: center;
+  }
+
+  .image-credit {
+    padding-block: 2rem 3rem;
+  }
+}
+
+// CARD COMPONENTS
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(u.rem(250), 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: u.rem(30) u.rem(20);
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: $shadow-card;
+
+  &__image {
+    max-height: u.rem(197);
+    max-width: u.rem(197);
+    aspect-ratio: 1 / 1;
+    border: 5px solid $clr-primary;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-inline: auto;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: u.rem(20);
+    margin-top: u.rem(30);
+  }
+
+  &__description {
+    font-style: italic;
+    margin-top: u.rem(25);
+  }
+
+  &__role {
+    font-weight: 600;
+    margin-top: u.rem(12);
+  }
+
+  &__social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: u.rem(30);
+
+    i {
+      font-size: 1.5rem;
+      color: $clr-primary;
+    }
+  }
+}
+
+// FOOTER STYLES
+.footer {
+  background-color: $clr-footer-bg;
+  color: white;
+  text-align: center;
+
+  &__text {
+    font-size: u.rem(14);
+    padding-block: 2rem;
+  }
+
+  &__credit {
+    font-size: u.rem(12.8);
+    padding-block: 2rem;
+  }
+}
